@@ -1,0 +1,35 @@
+---
+title: "Second R Markdown Assignment"
+author: Adam Chavarria
+date: 12/09/16
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment="")
+```
+###**Data**
+This is the data that has been observed, it shows the variance in different colors of poinsettias
+```{r}
+poin <- read.csv(file.choose())
+summary(poin)
+```
+
+
+
+###**Summary Statistics**
+The following is a summary of the data. It shows the min, 1st quartile, median, mean, 3rd quartile, max
+```{r}
+poin <- read.csv(file.choose())
+summary(poin)
+```
+
+###**Barplot**
+Below is a barplot showing the colors 
+```{r}
+poin<-read.csv(file.choose())
+counts <- table(poin$color)
+barplot(counts, main="Poinsettias", 
+        xlab="Color", col=c("pink","red", "white"))
+
+```
